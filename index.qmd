@@ -1,0 +1,126 @@
+---
+title: "Pengaruh Tingkat Pengangguran Terhadap Kemiskinan Pada Tahun 2021-2022 di 6 Provinsi di Pulau Jawa"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Vera Nurtandika"
+date: 2023-01-19
+number-sections: true
+format:
+  html: default
+  docx: default
+editor: visual
+---
+
+![](poltekapp.jpg)
+
+## Pendahuluan
+
+### Latar belakang
+
+Kemiskinan adalah kondisi dimana seseorang tidak bisa memenuhi kebutuhan hidupnya seperti, kebutuhan makan, pakaian, tempat berlindung, dan Kesehatan. Hal ini disebabkan oleh beberapa faktor yaitu kurang tersedianya lapangan kerja, kurangnya Pendidikan, kurangnya dukungan pemerintah, hal ini akan mengakibatkan munculnya kasus pengangguran yang meningkat.
+
+Pengangguran merupakan istilah bagi orang yang tidak memiliki pekerjaan sama sekali. Pengangguran ini dapat disebabkan oleh kenaikan jumlah penduduk yang terus meningkat namun tidak dibarengi dengan jumlah lapangan pekerjaan yang sesuai, kualitas SDM (Sumber Daya Manusia) yang masih rendah, kemajuan teknologi yang dimana kondisi ini tidak lagi memerlukan tenaga manusia, lalu pemutusan hubungan kerja atau PHK. Di masa transisi dari pandemic ke masa PHK besar-besaran di masa itu masih menyisakan pengangguran-pengangguran yang belum memiliki pekerjaan. Penyebab lain yaitu, Pendidikan yang tidak selesai atau putus sekolah yang dikarenakan orang tua tidak memiliki biaya untuk membiayai yang akan berdampak pada generasi selanjutnya.
+
+### Ruang lingkup
+
+Lingkup bahasan ini berisikan tentang pengaruh tingkat pengangguran terhadap kemiskinan di 6 provinsi Pulau Jawa yaitu Jawa Timur, Jawa Tengah, DI Yogyakarta, Jawa Barat, Dki Jakarta, dan Banten pada tahun 2021-2022.
+
+### Rumusan masalah
+
+1.  Apakah pengangguran berpengaruh pada kemiskinan di Pulau Jawa pada tahun 2021-2022?
+2.  Apakah pengangguran berpengaruh besar pada kemiskinan di Pulau Jawa pada tahun 2021-2022?
+3.  Apakah ada keterkaitan antara pengangguran dan kemiskinan di Pulau Jawa pada tahun 2021-2022?
+
+### Tujuan dan manfaat penelitian
+
+1.  Untuk mengetahui apakah pengangguran berpengaruh pada kemiskinan di Pulau Jawa pada tahun 2021-2022?
+2.  Untuk mengetahui apakah pengangguran berpengaruh besar pada kemiskinan di Pulau Jawa pada tahun 2021-2022?
+3.  Untuk mengetahui apakah ada keterkaitan antara pengangguran dan kemiskinan di Pulau Jawa pada tahun 2021-2022?
+
+### Package
+
+Package yang digunakan adalah:
+
+```{r}
+setwd('D:/metopel/latihan')
+library('readxl')
+library('tidyverse')
+dat<-read_excel('METOPEL.xlsx')
+```
+
+## Studi pustaka
+
+Pengangguran
+
+Menurut Badan Pusat Statistik (BPS) dalam indikator ketenagakerjaan, pengangguran adalah penduduk yang tidak bekerja namun sedang mencari pekerjaan atau sedang mempersiapkan suatu usaha baru atau penduduk yang tidak mencari pekerjaan karena sudah diterima bekerja namun belum mulai bekerja.
+
+Menurut Sukirno (1994) pengangguran adalah keadaan dimana angkatan kerja yang ingin memperoleh pekerjaan tapi belum mendapatkannya.
+
+Kemiskinan
+
+Kemiskinan diartikan sebagai suatu keadaan seseorang yang tidak dapat dan tidak sanggup untuk memelihara dirinya sendiri. Ketidakmampuan ini diukur dengan suatu taraf kehidupan kelompok. Orang tersebut juga tidak mampu memanfaatkan tenaga mental maupun fisiknya dalam kelompok masyarakat tersebut (Soerjono Soekanto, 1982)
+
+## Metode penelitian
+
+Data penelitian ini berasal dari badan pusat statistika (BPS). Data yang diteliti yaitu pengaruh pengangguran terhadap kemiskinan di Pulau Jawa yaitu Jawa Timur, Jawa Tengah, DI Yogyakarta, Jawa Barat, DKI Jakarta, dan Banten pada tahun 2021-2022.
+
+### Data
+
+| PROVINSI       | TAHUN | PENGANGGURAN | KEMISKINAN |
+|----------------|-------|--------------|------------|
+| DKI JAKARTA    | 2021  | 17,01        | 501,92     |
+| JAWA BARAT     | 2021  | 18,74        | 4195,34    |
+| JAWA TENGAH    | 2021  | 11,91        | 4109,75    |
+| D I YOGYAKARTA | 2021  | 8,84         | 506,45     |
+| JAWA TIMUR     | 2021  | 10,91        | 4572,73    |
+| BANTEN         | 2021  | 17,99        | 867,23     |
+| DKI JAKARTA    | 2022  | 15,18        | 502,04     |
+| JAWA BARAT     | 2022  | 16,66        | 4070,98    |
+| JAWA TENGAH    | 2022  | 11,32        | 3831,44    |
+| D I YOGYAKARTA | 2022  | 7,79         | 454,76     |
+| JAWA TIMUR     | 2022  | 10,3         | 4181,29    |
+| BANTEN         | 2022  | 16,62        | 814,02     |
+|                |       |              |            |
+|                |       |              |            |
+
+### Metode analisis
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 2 variabel independen. Penelitian ini merbaksud mencari hubungan antara pengangguran dan kemiskinan. Spesifikasi yang dilakukan adalah:
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah pengangguran dan $x_t$ adalah kemiskinan.
+
+## Pembahasan
+
+### Pembahasan masalah
+
+Pengangguran akan pasti berdampak pada mengurangi pendapatan bagi masyarakat, hal ini akan menurunkan tingkat kemakmuran yang masyarakat capai. seorang pengangguran tidak memiliki pendapatan. Kebutuhan masyarakat yang beragam dan tak terhitung jumlahnya membuat masyarakat berusaha untuk memenuhi kebutuhannya dengan bekerja untuk mendapatkan penghasilan yang diinginkan. Dampak yang terjadi jika masyarakat tidak bekerja atau tidak memiliki pekerjaan adalah masyarakat tidak dapat memenuhi kebutuhannya dengan baik. Ketika kebutuhan tidak dapat terpenuhi masyarakat tersebut akan masuk dalam kategori miskin. Hal ini tentu mengakibatkan peningkatan angka kemiskinan di Jawa Timur, Jawa Tengah, DI Yogyakarta, Jawa Barat, DKI Jakarta, dan Banten pada tahun 2021-2022. Data pengangguran dan kemiskinan dapat dilihat pada data yang telah tersaji.
+
+### Analisis masalah
+
+Hasil regresinya adalah
+
+```{r}
+reg1<-lm(PENGANGGURAN~KEMISKINAN,data=dat)
+summary(reg1)
+```
+
+Dapat dilihat dari tabel di atas bahwa ini adalah plot dari regresi tersebut.
+
+```{r}
+plot(dat$PENGANGGURAN,dat$KEMISKINAN,xlab="pengangguran",ylab="miskin")
+```
+
+## Kesimpulan
+
+Setiap 1% kenaikan dari pengangguran sejalan dengan 0.01098% penurunan kemiskinan penduduk Jawa Timur, Jawa Tengah, DI Yogyakarta, Jawa Barat, DKI Jakarta, dan Banten pada tahun 2021-2022.
+
+## Referensi
+
+Badan Pusat Statistik (2021-2022). TINGKAT PENGANGGURAN TERBUKA MENURUT PROVINSI.
+
+Badan Pusat Statistik (2021-2022). PRESENTASE PENDUDUK MISKIN (P0) MENURUT PROVINSI DAN DAERAH.
+
+Iman, Tubagus Rafiiuddin (2019) PENGARUH DANA ZAKAT PRODUKTIF TERHADAP PENDAPATAN MUSTAHIK (Studi Kasus Pada Laz El Zawa Kota Malang). Jurnal JURUSAN ILMU EKONOMI FAKULTAS EKONOMI DAN BISNIS UNIVERSITAS BRAWIJAYA MALANG.
+
+Kalsum, Umi (2017) PENGARUH PENGANGGURAN DAN INFLASI TERHADAP PERTUMBUHAN EKONOMI DI SUMATERA UTARA. jurnal ekonomikawan.
